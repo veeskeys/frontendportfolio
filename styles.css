@@ -52,13 +52,14 @@ nav a {
   font-size: 1rem;
   letter-spacing: 1px;
   color: #cfd1d2;
-  transition: color 0.6s ease, opacity 0.6s ease;
+  transition: color 0.6s ease, opacity 0.6s ease, text-shadow 0.6s ease;
   opacity: 0.85;
 }
 
 nav a:hover {
-  color: #ffffff;
+  color: #f0e9e0; /* warm beige-gray */
   opacity: 1;
+  text-shadow: 0 0 8px rgba(240, 233, 224, 0.2);
 }
 
 /* Sections */
@@ -90,8 +91,10 @@ p {
 }
 
 .project {
-  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition: transform 0.8s ease, opacity 0.8s ease, box-shadow 0.8s ease;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1rem;
+  border-radius: 6px;
 }
 
 .project h3 {
@@ -108,37 +111,41 @@ p {
 
 .project:hover {
   transform: translateY(-4px);
-  opacity: 0.9; /* subtle "fog lift" */
+  opacity: 0.95;
+  box-shadow: 0 0 18px rgba(240, 233, 224, 0.12); /* beige-gray glow */
 }
 
 /* Contact */
 .contact a {
   color: #c5c8ca;
   text-decoration: underline;
-  transition: color 0.6s ease, opacity 0.6s ease;
+  transition: color 0.6s ease, opacity 0.6s ease, text-shadow 0.6s ease;
   opacity: 0.85;
 }
 
 .contact a:hover {
-  color: #ffffff;
+  color: #f0e9e0;
   opacity: 1;
+  text-shadow: 0 0 6px rgba(240, 233, 224, 0.18);
 }
 
 /* Optional button style */
 button {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.15);
   color: #e6e6e6;
   padding: 0.6rem 1.2rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.6s ease, opacity 0.6s ease;
+  transition: background 0.6s ease, opacity 0.6s ease, box-shadow 0.6s ease, border 0.6s ease;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button:hover {
-  background: rgba(255,255,255,0.05); /* barely-there mist */
-  opacity: 0.9;
+  background: rgba(240, 233, 224, 0.05); /* faint beige wash */
+  opacity: 0.95;
+  border: 1px solid rgba(240, 233, 224, 0.25);
+  box-shadow: 0 0 12px rgba(240, 233, 224, 0.15);
 }
 
 /* Footer */
