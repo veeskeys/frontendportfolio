@@ -10,8 +10,8 @@
 
 /* Body with animated fog overlay */
 body {
-  background-color: #0f0f10; /* dark foggy base */
-  color: #e6e6e6;
+  background-color: #f7f5f0; /* soft light beige */
+  color: #3a3a3a; /* dark gray text */
   font-family: 'Playfair Display', serif;
   line-height: 1.8;
   font-weight: 400;
@@ -29,22 +29,16 @@ body::before {
   height: 200%;
   pointer-events: none; /* clicks pass through */
   background: 
-    radial-gradient(circle at 20% 30%, rgba(240,233,224,0.02) 0%, transparent 70%),
-    radial-gradient(circle at 80% 70%, rgba(240,233,224,0.03) 0%, transparent 60%),
-    radial-gradient(circle at 50% 50%, rgba(240,233,224,0.015) 0%, transparent 80%);
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.02) 0%, transparent 70%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.03) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.015) 0%, transparent 80%);
   animation: driftFog 120s linear infinite;
 }
 
 @keyframes driftFog {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(-5%, -3%);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-5%, -3%); }
+  100% { transform: translate(0, 0); }
 }
 
 /* Header / Hero */
@@ -57,13 +51,13 @@ header {
   font-family: 'Tangerine', cursive;
   font-size: 4rem;
   font-weight: 400;
-  color: #e6e6e6;
+  color: #3a3a3a;
   letter-spacing: 1px;
 }
 
 .hero h1 .initial {
   font-size: 4.8rem;
-  color: #c5c8ca;
+  color: #5c5143; /* slightly darker first letters */
 }
 
 .hero p {
@@ -82,15 +76,15 @@ nav a {
   text-decoration: none;
   font-size: 1rem;
   letter-spacing: 1px;
-  color: #cfd1d2;
+  color: #5c5143; /* dark beige/gray */
   transition: color 0.6s ease, opacity 0.6s ease, text-shadow 0.6s ease;
   opacity: 0.85;
 }
 
 nav a:hover {
-  color: #f0e9e0; /* warm beige-gray */
+  color: #3a3a3a; /* deeper contrast */
   opacity: 1;
-  text-shadow: 0 0 8px rgba(240, 233, 224, 0.2);
+  text-shadow: 0 0 6px rgba(0,0,0,0.08);
 }
 
 /* Sections with misty beige overlay */
@@ -98,16 +92,16 @@ section {
   max-width: 900px;
   margin: 6rem auto;
   padding: 3rem 1.5rem;
-  background: rgba(240, 233, 224, 0.05); /* translucent beige wash */
+  background: rgba(245, 240, 230, 0.6); /* light beige overlay */
   border-radius: 12px;
-  backdrop-filter: blur(3px); /* misty effect */
-  -webkit-backdrop-filter: blur(3px);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
   transition: background 0.6s ease;
 }
 
 section:hover {
-  background: rgba(240, 233, 224, 0.08);
+  background: rgba(245, 240, 230, 0.8);
 }
 
 h2 {
@@ -116,7 +110,7 @@ h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   letter-spacing: 1px;
-  color: #dcdcdc;
+  color: #3a3a3a;
 }
 
 p {
@@ -136,14 +130,16 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   padding: 1rem;
   border-radius: 6px;
-  cursor: pointer; /* pointer on hover */
+  background: rgba(255,255,255,0.4); /* light overlay */
+  color: #3a3a3a;
+  cursor: pointer;
 }
 
 .project h3 {
   font-weight: 500;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: #e0e0e0;
+  color: #3a3a3a;
 }
 
 .project p {
@@ -154,28 +150,28 @@ p {
 .project:hover {
   transform: translateY(-4px);
   opacity: 0.95;
-  box-shadow: 0 0 18px rgba(240, 233, 224, 0.12); /* beige-gray glow */
+  box-shadow: 0 0 18px rgba(92, 81, 67, 0.12); /* dark beige glow */
 }
 
 /* Contact */
 .contact a {
-  color: #c5c8ca;
+  color: #5c5143;
   text-decoration: underline;
   transition: color 0.6s ease, opacity 0.6s ease, text-shadow 0.6s ease;
   opacity: 0.85;
 }
 
 .contact a:hover {
-  color: #f0e9e0;
+  color: #3a3a3a;
   opacity: 1;
-  text-shadow: 0 0 6px rgba(240, 233, 224, 0.18);
+  text-shadow: 0 0 6px rgba(0,0,0,0.08);
 }
 
 /* Optional button style */
 button {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.15);
-  color: #e6e6e6;
+  border: 1px solid rgba(58,58,58,0.15);
+  color: #3a3a3a;
   padding: 0.6rem 1.2rem;
   border-radius: 4px;
   cursor: pointer;
@@ -184,10 +180,10 @@ button {
 }
 
 button:hover {
-  background: rgba(240, 233, 224, 0.05); /* faint beige wash */
+  background: rgba(245, 240, 230, 0.3);
   opacity: 0.95;
-  border: 1px solid rgba(240, 233, 224, 0.25);
-  box-shadow: 0 0 12px rgba(240, 233, 224, 0.15);
+  border: 1px solid rgba(92, 81, 67, 0.25);
+  box-shadow: 0 0 12px rgba(92, 81, 67, 0.15);
 }
 
 /* Footer */
