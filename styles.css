@@ -1,19 +1,23 @@
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Tangerine&family=Playfair+Display:wght@400;500&display=swap');
 
-/* Reset + base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Base foggy background */
 body {
   background-color: #0f0f10; /* dark foggy base */
+  background-image: url('https://i.ibb.co/2P6L0Qq/fog-texture.png'); /* subtle fog overlay */
+  background-repeat: repeat;
+  background-size: cover;
   color: #e6e6e6;
   font-family: 'Playfair Display', serif;
   line-height: 1.8;
   font-weight: 400;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Header / Hero */
@@ -180,3 +184,4 @@ footer {
     font-size: 6rem;
   }
 }
+
